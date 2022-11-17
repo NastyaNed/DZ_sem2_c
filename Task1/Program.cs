@@ -5,9 +5,8 @@
 // 782 -> 8
 // 918 -> 1
 
-Console.WriteLine("Введите трeхзначное число:");
-int number = Convert.ToInt32(Console.ReadLine());
-
+int number = new Random().Next(100,1000);
+Console.WriteLine($"наше случайное число = {number}");
 
 int rezult = (number / 10) % 10;
 
