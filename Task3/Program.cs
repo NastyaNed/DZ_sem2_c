@@ -4,30 +4,29 @@
 // 1 -> нет
 
 int number = ReadInt("Введите число от 1 до 7: ");
-Console.WriteLine(WorkHoliday(number));
+Console.WriteLine(Week(number));
 
 int ReadInt(string message)
 {
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
-
-string WorkHoliday(int a)
+string Week(int number)
 {
-    if (a > 0 && a < 8)
+    if (number > 0 && number < 8)
     {
-        if (a == 7 || a == 6)
+        if (number == 7 || number == 6)
         {
-            Console.Write("Под цифрой " + a + " - Выходной");
+            Console.Write($"{number} -Является выходным");
         }
         else
         {
-            Console.Write("Под цифрой " + a + " - Рабочий");
+            Console.Write($"{number} - Является рабочим");
         }
     }
     else
     {
-        Console.Write("Вы ввели число не в пределах от 1 до 7, поэтому не возможно определить");
+        Console.Write("Число , которое вы ввели не входит в диапозон от 1 до 7");
     }
-    return " день.";
+    return " днем.";
 }
